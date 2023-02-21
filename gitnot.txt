@@ -1,0 +1,81 @@
+git config --global -l // git e mail adresini gosterir localinde
+git --version          // versionu gosterir
+git config --global user.name "Ali veli" // yapilan commitlerin burda belirtirken iliskilendirir. repoda calisan diger kisiler bu isim ve e postayi gorur
+git config --global user.email "ali@vel" // buda isim versiyonunun e mail olani
+git init // local de bir projeyi versiyona almak icin kullanilir bir defa yapsak yeterli
+git add . // dosya ekler
+git status // yapmis olunan calismayi gosterir ( git  status ile yapilan ikinci calisamyi gormek icin  git add . yapman gerekli ilk once terminalde )
+git commit -m "y1"  // Githuba gonderilen kodun ayrimini yapar.
+git commit -amend -m "yenileme" // commite yanlis mesaj attiysaniz geri alir 
+git log --oneline  // gonderilecek olan dosyanin commit adi ve master adini gosterir
+git diff   // yapilan degisikligin icerigini gosterir
+cd..        // alt klasore gecer
+cd dosyaadi  // cd sonrasi gecilmek istenen dosya adi yazilarak gecis yapilir
+dir         // cmd alaninda dir yaparsan destkopta olan dosyalarini gosterir
+git log    // git log --oneline komutunun kisa hali fakat yazilan kodlarin icerigi detayli gorunur cok tercih edilmez  cikmak icin Q harfine basmak yeterlidir
+git show   // commitlenen komuttan alinan degeri bu komut sonuna eklersen yapilan calisma gosterilir
+git restore .  // localde olan silme islemini yapar son dosyayi veya kodu
+cls         // yazilan komut kalabaligni cmd den siler
+git reset --hard  // kodlari kalici olarak siler dikkat edilmeli emin olduktan sonra silmek gerekli
+git restore --staged .  // ile yapilan degisklik geri alinir. bu islem sonrasi git restore . yapilir ve yazilan alan temizlenir
+git checkout .  // git log --oneline yaparak yazdigimiz kodlarin komutlarini alio checkout  ve mnokta arasina yapistir. calisma alanin cikar bu yolla cakisan kodlarin ayiklanmasi yapilir
+git commit -am "v1" // git add . yaptiktan sonra -am komutu ile push edilebilir bir kez git add . yapmak yeterli cmd de
+git branch isim // bu komutla branch ismi olusturulur ve git branch ile cagrilir 
+git checkout isim // bu bkomutla branch ve master yer degistirir ve git branch ile cagrilir
+git branch -m isim  // branch ismini degistirir
+git branch -d isim // branche atanan ismi sileer
+git merge isim  // birlestirme islemi yapar  fakat checkout isim yapmak gerekli oncesinde
+git stash    // gecici hafizaya alir kodlari
+git stash list  // bu komut ile gecici hafizadan cagrilir kodlar
+git stash pop    // yazilan kodlar aplicationa ile tekrar gelir
+git remote add origin // yapip git adresini klonla 
+git push   // bu islemi ilk yaptiginda sana --set ile baslayan kismi sunacak 
+ git push --set-upstream origin isim // bu islem ile master gondermen gerekli
+git pull   // locale veri ceker 
+
+----- baskasinin kodunu cekip direk gite atmak sorun olur 
+----- kodu indirip icindeki git branchi sil 
+----- sonra tekrar git init yap / ekle / commit / sonra gite at
+
+.gitignore   // cok onemli , gorunmesini istemediginiz dosyalarin adini bunun icine yazarak gonderin ayni zamanda cakismayi onler
+git config --get user.email // cmd de mail adresinizi gorursunuz
+git config --global user.email "mail adresi" // e maili degistirme kodu 
+Proje calismasi yapilirken cakismayi onleme adina hekese belli alan verilebilr ve boylece cakismanin onune gecilebilir diger kodlara sorun olmadan
+Proje yapilirken pull ile master cekilir ama kendi olusturdugumuz branch ile gonderilir yoksa sorun olur masterden mastera gonderim olmaz
+
+gitignore ile saklamak istedigimiz kisimlari yazabilirsiniz. dosyanin adi birebir aynen yazilmalidir mesela pagejson kismini yazarsak o kismi gizlenir bizden baskasi goremez
+
+-------------merge--------------
+
+master ve diger branchi esitlemek icin git checkout branch ismi yazilir daha sonra git merge master yapilir ve esit seviyeye gelir iki tarafta
+git checkout brabch adi
+git merge master
+ esitlendi
+not : masterdan mastera push olmaz projede
+-------conflig-------------
+
+github da conflig hatasi alirsan birlestirme yaparak cozebilirsin kodlarda da hata yoksa resolve conflits 
+----------  tusuna bas ve kodlarda sikinti yoksa mark as resolved e bas sonrasind gelen commid merge bas ve   onayla bu islemin aynini vs code ilede yapabilirsin 
+---- Cofligte arada olan cift cizgi ve kod haricinde olan kismi silerek birlestirme yap
+
+
+ ---------Collabration-------
+
+---- projeye dahail etmek istedigin kisiler icin setting kismindan collabraation kismini tikla ve add people ile mail adreslerine invite send yap
+----- Ekip pull yapacak ve locale indirecekler
+-----Merge edip push edecekler ve yonetici pull request kismina tiklayacak master ile merge icin
+-----Sonrasinda new pull request te tiklayip compare kismindan ekip uyesini sec sonra create pull request yaparak ilerle
+-----Pull yapilirken locale master ile yapmak gerekir sonrasinda merge edilebilir
+----- not : masterdan mastera push olmaz projede 
+
+
+
+
+
+
+
+
+
+
+
+
